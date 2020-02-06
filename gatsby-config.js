@@ -5,5 +5,19 @@
  */
 
 module.exports = {
-  /* Your site config here */
+    siteMetadata: {
+        title: "CoinedOne Teachnologies",
+        description: "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+    },
+    plugins: [
+        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pages`,
+                path: `${__dirname}/src/pages/`,
+            },
+        },
+        `gatsby-transformer-remark`,
+    ],
 }
